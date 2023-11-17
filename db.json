@@ -1,0 +1,140 @@
+{
+    "categories": [
+        {
+            "Id": 1,
+            "Name": "Bilgisayar"
+        },
+        {
+            "Id": 2,
+            "Name": "Buzdolabı"
+        },
+        {
+            "Id": 3,
+            "Name": "Ütü"
+        }
+    ],
+    "product":[
+        {
+            "Id": 1,
+            "CategoryId": 1,
+            "Name": "Dell Bilgisayar",
+            "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
+            "ProductSettings": [
+                {
+                    "SettingId": 1,
+                    "Value": "Intel i7"
+                },
+                {
+                    "SettingId": 2,
+                    "Value": "16 GB"
+                }
+            ]
+        },
+        {
+            "Id": 2,
+            "CategoryId": 1,
+            "Name": "Apple Bilgisayar",
+            "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
+            "ProductSettings": [
+                {
+                    "SettingId": 1,
+                    "Value": "Apple M1"
+                },
+                {
+                    "SettingId": 2,
+                    "Value": "32 GB"
+                }
+            ]
+        },
+        {
+            "Id": 3,
+            "CategoryId": 2,
+            "Name": "Arçelik Buzdolabı",
+            "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
+            "ProductSettings": [
+                {
+                    "SettingId": 3,
+                    "Value": "B"
+                },
+                {
+                    "SettingId": 4,
+                    "Value": "Beyaz"
+                }
+            ]
+        },
+        {
+            "Id": 4,
+            "CategoryId": 2,
+            "Name": "Samsung Buzdolabı",
+            "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
+            "ProductSettings": [
+                {
+                    "SettingId": 3,
+                    "Value": "A+"
+                },
+                {
+                    "SettingId": 4,
+                    "Value": "Gri"
+                }
+            ]
+        },
+        {
+            "Id": 5,
+            "CategoryId": 3,
+            "Name": "Philips Ütü",
+            "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
+            "ProductSettings": [
+                {
+                    "SettingId": 5,
+                    "Value": "3000 Watt"
+                },
+                {
+                    "SettingId": 6,
+                    "Value": "260 gr/dk"
+                }
+            ]
+        },
+        {
+            "Id": 6,
+            "CategoryId": 3,
+            "Name": "Tefal Ütü",
+            "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
+            "ProductSettings": [
+                {
+                    "SettingId": 5,
+                    "Value": "3200 Watt"
+                },
+                {
+                    "SettingId": 6,
+                    "Value": "280 gr/dk"
+                }
+            ]
+        }
+    ],
+    "setting":[
+        {
+            "Id": 1,
+            "Name": "İşlemci"
+        },
+        {
+            "Id": 2,
+            "Name": "Hafıza (RAM)"
+        },
+        {
+            "Id": 3,
+            "Name": "Enerji Sınıfı"
+        },
+        {
+            "Id": 4,
+            "Name": "Renk"
+        },
+        {
+            "Id": 5,
+            "Name": "Güç (Watt)"
+        },
+        {
+            "Id": 6,
+            "Name": "Şok Buhar"
+        }
+    ]
+  }
