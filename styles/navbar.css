@@ -1,0 +1,23 @@
+.navbar {
+    background-color: transparent;
+    text-align: center;
+    padding:  15px 20px !important;
+  }
+
+  
+  .navbar-text {
+    font-size: 35px !important;
+    color: black !important;
+  }
+  
+  @media (max-width: 768px) {
+    .navbar-text {
+        font-size: 28px !important;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .navbar-text {
+        font-size: 25px !important;
+    }
+  }
