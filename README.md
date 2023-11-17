@@ -14,7 +14,7 @@ pnpm dev
 bun dev
 ```
 
-And, start json-server server:
+And, start json server:
 
 ```bash
 npm run json-server
