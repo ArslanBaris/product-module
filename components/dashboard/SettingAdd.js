@@ -4,11 +4,7 @@ import { Button } from 'primereact/button';
 import { InputText } from 'primereact/inputtext';
 import { Dropdown } from 'primereact/dropdown';
 import axios from 'axios';
-import { DataTable } from 'primereact/datatable';
-import { Column } from 'primereact/column';
-import { InputTextarea } from 'primereact/inputtextarea';
 import { Toast } from 'primereact/toast';
-
 
 export default function SettingAdd(props) {
 
@@ -16,11 +12,11 @@ export default function SettingAdd(props) {
     const { isOpen, setIsOpen, addSetting } = props;
 
     const [selectedSetting, setSelectedSetting] = useState();
-    const [settingValue, setSettingValue] = useState();    
+    const [settingValue, setSettingValue] = useState();
     const [settingOptions, setSettingOptions] = useState([]);
 
     const showError = (message) => {
-        toast.current.show({ severity: 'error', summary: 'Error', detail: message, life: 3000 });
+        toast.current.show({ severity: 'error', summary: 'Oops', detail: message, life: 3000 });
     }
 
     useEffect(() => {
@@ -60,15 +56,13 @@ export default function SettingAdd(props) {
             return;
         }
         let newSetting = {
-           ...selectedSetting,
-            
+            ...selectedSetting,
+
             Value: settingValue
         }
         addSetting(newSetting)
         settingModalToggle()
-
     }
-
 
     const settingFooterContent = (
         <div>
