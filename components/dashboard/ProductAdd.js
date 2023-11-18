@@ -23,39 +23,14 @@ export default function ProductAdd(props) {
     const [productDetail, setProductDetail] = useState();
     const [addedSettings, setAddedSettings] = useState([]);
 
+    // Notifactaions
     const showError = (message) => {
-        toast.current.show({ severity: 'error', summary: 'Error', detail: message, life: 3000 });
+        toast.current.show({ severity: 'error', summary: 'Oops', detail: message, life: 3000 });
     }
 
     const showSuccess = (message) => {
         toast.current.show({ severity: 'success', summary: 'Success', detail: message, life: 3000 });
     }
-
-    const modalToggle = () => {
-        setIsOpen(!isOpen)
-        setProductDetail(null)
-        setProductName(null)
-        setSelectedCategory(null)
-        setAddedSettings([])
-    }
-
-    const addSettingFunc = (setting) => {
-        setAddedSettings([...addedSettings, setting])
-    }
-
-    const footerContent = (
-        <div>
-            <Button size='small' label="Cancel" severity='danger' icon="pi pi-times" onClick={() => { modalToggle() }} className="p-button-text" />
-            <Button size='small' label="Update" severity='success' icon="pi pi-check" onClick={() => { onSubmit() }} className="p-button-text" autoFocus />
-        </div>
-    );
-
-    const headerContent = (
-        <div className="flex flex-wrap align-items-center justify-content-between gap-2">
-            <span className="text-xl text-900 font-bold">Settings</span>
-            <Button severity='success' icon="pi pi-plus-circle" rounded raised onClick={() => { setAddSettingModal(true); }} />
-        </div>
-    );
 
     const removeSetting = (rowData) => {
         let newSettings = addedSettings.filter(setting => setting.Id !== rowData.Id)
@@ -68,25 +43,34 @@ export default function ProductAdd(props) {
         </div>)
     }
 
-    const validateForm = () => {
-        if (productName == null || productName == '' || productName == undefined || productName.trim() == '') {
-            showError("Please enter a product name !")
-            return false;
-        }
-        if (selectedCategory == null || selectedCategory == '' || selectedCategory == undefined) {
-            showError("Please select a category !")
-            return false;
-        }
-        if (productDetail == null || productDetail == '' || productDetail == undefined || productDetail.trim() == '') {
-            showError("Please enter a product detail !")
-            return false;
-        }
-        if (addedSettings.length == 0) {
-            showError("Please add at least one setting !")
-            return false;
-        }
-        return true
+    // Event functions
+    const modalToggle = () => {
+        setIsOpen(!isOpen)
+        setProductDetail(null)
+        setProductName(null)
+        setSelectedCategory(null)
+        setAddedSettings([])
     }
+
+    const addSettingFunc = (setting) => {
+        setAddedSettings([...addedSettings, setting])
+    }
+
+    // Render functions
+    const footerContent = (
+        <div>
+            <Button size='small' label="Cancel" severity='danger' icon="pi pi-times" onClick={() => { modalToggle() }} className="p-button-text" />
+            <Button size='small' label="Add" severity='success' icon="pi pi-plus-circle" onClick={() => { onSubmit() }} className="p-button-text" autoFocus />
+        </div>
+    );
+
+    const headerContent = (
+        <div className="flex flex-wrap align-items-center justify-content-between gap-2">
+            <span className="text-xl text-900 font-bold">Settings</span>
+            <Button severity='success' icon="pi pi-plus-circle" rounded raised onClick={() => { setAddSettingModal(true); }} />
+        </div>
+    );
+
 
     const onSubmit = async () => {
         if (validateForm()) {
@@ -99,7 +83,7 @@ export default function ProductAdd(props) {
             })
 
             let newProduct = {
-                id: generateUniqueKey(),
+                Id: generateUniqueKey(),
                 Name: productName,
                 Description: productDetail,
                 CategoryId: selectedCategory.Id,
@@ -113,10 +97,27 @@ export default function ProductAdd(props) {
 
                 }).catch(err => console.error(err));
         };
-
     }
 
-
+    const validateForm = () => {
+        if (productName == null || productName == '' || productName == undefined || productName.trim() == '') {
+            showError("Please enter a product name !")
+            return false;
+        }
+        if (selectedCategory == null || selectedCategory == '' || selectedCategory == undefined) {
+            showError("Please select a category !")
+            return false;
+        }
+        if (productDetail == null || productDetail == '' || productDetail == undefined || productDetail.trim() == '') {
+            showError("Please enter a product description !")
+            return false;
+        }
+        if (addedSettings.length == 0) {
+            showError("Please add at least one setting !")
+            return false;
+        }
+        return true
+    }
 
     return (
         <div>
