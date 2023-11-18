@@ -230,9 +230,9 @@ export default function ProductDetail(props) {
   return (
     <div>
       <Dialog header="Product Detail" visible={isOpen} style={{ width: '50vw' }} onHide={() => modalToggle()} footer={footerContent}>
-        <div class="formgrid grid" style={{ justifyContent: "space-around" }}>
+        <div className="formgrid grid" style={{ justifyContent: "space-around" }}>
 
-          <div class="field col-5">
+          <div className="field col-5">
             <div className="flex flex-column gap-2">
               <label htmlFor="username">Name</label>
               <span className="p-input-icon-left">
@@ -242,7 +242,7 @@ export default function ProductDetail(props) {
             </div>
           </div>
 
-          <div class="field col-5">
+          <div className="field col-5">
             <div className="flex flex-column gap-2">
               <label htmlFor="username">Category</label>
               <span className="p-input-icon-left">
@@ -259,7 +259,7 @@ export default function ProductDetail(props) {
             </div>
           </div>
 
-          <div class="field col-11">
+          <div className="field col-11">
             <div className="flex flex-column gap-2">
               <label htmlFor="username">Description</label>
               <span className="p-input-icon-left">
@@ -275,7 +275,7 @@ export default function ProductDetail(props) {
             </div>
           </div>
 
-          <div class="field col-11">
+          <div className="field col-11">
             <DataTable value={settings} header={headerContent} editMode="row" onRowEditComplete={onRowEditComplete} >
               <Column field="Setting" header="Name" editor={(options) => settingEditor(options)} body={settingRender} ></Column>
               <Column field="Value" header="Value" editor={(options) => textEditor(options)} ></Column>

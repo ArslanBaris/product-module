@@ -122,9 +122,9 @@ export default function ProductAdd(props) {
     return (
         <div>
             <Dialog header="New Product" visible={isOpen} style={{ width: '50vw' }} onHide={() => modalToggle()} footer={footerContent}>
-                <div class="formgrid grid" style={{ justifyContent: "space-around" }}>
+                <div className="formgrid grid" style={{ justifyContent: "space-around" }}>
 
-                    <div class="field col-5">
+                    <div className="field col-5">
                         <div className="flex flex-column gap-2">
                             <label htmlFor="username">Product Name</label>
                             <span className="p-input-icon-left">
@@ -134,7 +134,7 @@ export default function ProductAdd(props) {
                         </div>
                     </div>
 
-                    <div class="field col-5">
+                    <div className="field col-5">
                         <div className="flex flex-column gap-2">
                             <label htmlFor="username">Category</label>
                             <span className="p-input-icon-left">
@@ -149,7 +149,7 @@ export default function ProductAdd(props) {
                         </div>
                     </div>
 
-                    <div class="field col-11">
+                    <div className="field col-11">
                         <div className="flex flex-column gap-2">
                             <label htmlFor="username">Product Detail</label>
                             <span className="p-input-icon-left">
@@ -159,7 +159,7 @@ export default function ProductAdd(props) {
                         </div>
                     </div>
 
-                    <div class="field col-11">
+                    <div className="field col-11">
                         <DataTable value={addedSettings} header={headerContent} >
                             <Column field="Name" header="Name" ></Column>
                             <Column field="Value" header="Value" ></Column>

@@ -74,9 +74,9 @@ export default function SettingAdd(props) {
     return (
         <div>
             <Dialog header="Add Setting" visible={isOpen} style={{ width: '40vw' }} onHide={() => settingModalToggle()} footer={settingFooterContent}>
-                <div class="formgrid grid" style={{ justifyContent: "space-around" }}>
+                <div className="formgrid grid" style={{ justifyContent: "space-around" }}>
 
-                    <div class="field col-5">
+                    <div className="field col-5">
                         <div className="flex flex-column gap-2">
                             <label htmlFor="username">Select Setting</label>
                             <span className="p-input-icon-left">
@@ -91,7 +91,7 @@ export default function SettingAdd(props) {
                         </div>
                     </div>
 
-                    <div class="field col-5">
+                    <div className="field col-5">
                         <div className="flex flex-column gap-2">
                             <label htmlFor="username">Setting Value</label>
                             <span className="p-input-icon-left">
