@@ -229,7 +229,7 @@ export default function ProductDetail(props) {
 
   return (
     <div>
-      <Dialog header="Product Detail" visible={isOpen} style={{ width: '50vw' }} onHide={() => modalToggle()} footer={footerContent}>
+      <Dialog header="Product Detail" visible={isOpen} style={{ width: '60vw' }} onHide={() => modalToggle()} footer={footerContent}>
         <div className="formgrid grid" style={{ justifyContent: "space-around" }}>
 
           <div className="field col-5">
@@ -279,7 +279,7 @@ export default function ProductDetail(props) {
             <DataTable value={settings} header={headerContent} editMode="row" onRowEditComplete={onRowEditComplete} >
               <Column field="Setting" header="Name" editor={(options) => settingEditor(options)} body={settingRender} ></Column>
               <Column field="Value" header="Value" editor={(options) => textEditor(options)} ></Column>
-              <Column rowEditor bodyStyle={{ textAlign: 'center', width: '25%' }}></Column>
+              <Column rowEditor bodyStyle={{ textAlign: 'center', width: '30%' }}></Column>
               <Column field="" header="" body={deleteSetting} bodyStyle={{ width: '5%' }} ></Column>
             </DataTable>
           </div>
