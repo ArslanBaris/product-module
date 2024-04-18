@@ -83,7 +83,7 @@ export default function ProductAdd(props) {
             })
 
             let newProduct = {
-                Id: generateUniqueKey(),
+                id: generateUniqueKey(),
                 Name: productName,
                 Description: productDetail,
                 CategoryId: selectedCategory.Id,

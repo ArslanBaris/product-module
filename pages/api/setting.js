@@ -2,7 +2,7 @@ import axios from "axios";
 
 export default async function handler(req, res) {
   try {
-    const response = await axios.get('http://0.0.0.0:3001/setting');
+    const response = await axios.get(`${process.env.NEXT_APP_API_URL}/setting`);
     res.status(200).json(response.data);
   } catch (error) {
     res.status(500).json({ message: 'Error fetching data' });
